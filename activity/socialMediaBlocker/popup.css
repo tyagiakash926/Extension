@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.heading h1{
+    font-family: monospace;
+    text-align: center;
+    border-bottom: 1px solid;
+    width: 60%;
+    color: rgb(64, 212, 193);
+    margin-left: 3%;
+}
+.heading h2{
+    font-family: monospace;
+    text-align: right;
+    font-weight: bolder;
+    width: 30%;
+    color: rgb(219, 30, 30);
+    border-bottom: 1px solid;
+    margin-left: 65%;
+}
+.type-block{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.type-block input{
+    width: 175px;
+    height: 30px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    outline: none;
+    border: none;
+    background: rgb(244, 249, 253);
+    color: rgb(223, 163, 35);
+    font-weight: bold;
+}
+.blocker-sites{
+    display: flex;
+    flex-direction: column;
+    margin-left: 4%;
+    height: 60%;
+    font-size: 16px;
+    list-style: none;
+    justify-content: center;
+    width: 90%;
+    margin-top: 10%;
+}
+
+.blocker-sites li{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: rgb(230, 25, 25);
+    cursor: pointer;
+    margin-top: 3%;
+    
+}
+.blocker-sites i{
+    margin-top: 3%;
+    color: rgb(61, 216, 61);
+}
+.blocker-sites li text{
+
+}
+.block-btn{
+    cursor: pointer;
+    cursor: pointer;
+    width: 65px;
+    margin-right: 4%;
+    height: 20px;
+    margin-bottom: 5%;
+    border: 1px solid rgb(238, 84, 84);
+    border-radius: 27px;
+    margin-left: 2%;
+    text-align: center;
+    transition: transform 0.5s;
+    
+}
+.block-btn:hover{
+    transform: scale(1.2);
+    background-color: rgb(238, 84, 84);
+    color: white;
+    font-weight: bolder;
+
+}
