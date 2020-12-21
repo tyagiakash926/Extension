@@ -1,7 +1,7 @@
 {
   "name": "Demo Extension",
   "version": "1.0",
-  "description": "This is a demo extension",
+  "description": "This is a demo extension!!",
   "manifest_version": 2,
   "content_scripts": [
       {

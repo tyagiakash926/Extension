@@ -1,5 +1,5 @@
 let images = ["./images/89125115b0e10b94e3378d484712450727-25-thanos.rsocial.w1200.jpg" ,
-"./images/97d1d9f934a350cee765c5ac1a466605.jpg" , "./images/Thanos_MCU.jpg"];
+"./images/97d1d9f934a350cee765c5ac1a466605.jpg" , "./images/Thanos_MCU.jpg" , "./images/photo-1544716278-ca5e3f4abd8c.jpg"];
 
 function changeImage(){
     let allImages = document.querySelectorAll("img");

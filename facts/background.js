@@ -8,7 +8,7 @@ chrome.tabs.onUpdated.addListener(function(tabId,changeInfo,tab){
     // console.log(tabId);
     // console.log(tab);
     if(tab.url.includes("youtube")){
-        console.log("youtube");
+        // console.log("youtube");
         chrome.tabs.remove(tabId);
     }
 })
