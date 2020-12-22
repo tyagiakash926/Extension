@@ -1,6 +1,7 @@
 let ul = document.querySelector(".blocker-sites");
 let input = document.querySelector(".type");
 let blockBtn = document.querySelector(".block-btn");
+let tickBox = document.querySelector("#checkbox");
 let blockerSite;
 let gBlockList = [];
 
@@ -25,6 +26,18 @@ function addSiteToBeBlocked(block){
   node.appendChild(icon);
   ul.appendChild(node);
 
+  if(tickBox.checked==true){
+    document.body.style.backgroundColor = "#34495e";
+    document.getElementsByClassName("type")[0].style.backgroundColor="#bdc3c7"
+    // document.getElementsByClassName("block-btn")[0].style.backgroundColor = "#3498db";
+    if(document.getElementsByClassName("blockurl")){
+      for(let i=0;i<document.getElementsByClassName("blockurl").length;i++){
+        document.getElementsByClassName("blockurl")[i].style.color = "white";
+      document.getElementsByClassName("blockurl")[i].style.fontWeight = "bold";
+      }
+    }
+  }
+
   icon.addEventListener("click",function(){
     let tag = icon.parentNode.textContent;
     icon.parentNode.remove();
@@ -35,6 +48,7 @@ function addSiteToBeBlocked(block){
     });
     
   })
+  
 }
 blockBtn.addEventListener("click",function(){
   // input.value = "";
@@ -76,11 +90,35 @@ blockBtn.addEventListener("click",function(){
     chrome.runtime.sendMessage({type:"add" , site:value}, function(response) {
         console.log(response);
     }); 
-}
-
- 
- 
-  
-
-  
+} 
 })
+
+tickBox.addEventListener("click",function(){
+  if(tickBox.checked==true){
+    document.body.style.backgroundColor = "#34495e";
+    document.getElementsByClassName("type")[0].style.backgroundColor="#bdc3c7"
+    // document.getElementsByClassName("block-btn")[0].style.backgroundColor = "#3498db";
+    if(document.getElementsByClassName("blockurl")){
+      for(let i=0;i<document.getElementsByClassName("blockurl").length;i++){
+        document.getElementsByClassName("blockurl")[i].style.color = "white";
+      document.getElementsByClassName("blockurl")[i].style.fontWeight = "bold";
+      }
+    }
+  }else{
+    document.body.style.backgroundColor = "transparent";
+    document.getElementsByClassName("type")[0].style.backgroundColor="rgb(244, 249, 253)"
+    document.getElementsByClassName("block-btn")[0].style.color = "#fff";
+    // document.getElementsByClassName("block-btn")[0].style.border = "thin solid rgb(238, 84, 84)";
+    // document.getElementsByClassName("block-btn")[0].style.border = "thin solid rgb(238, 84, 84)";
+    if(document.getElementsByClassName("blockurl")){
+      document.getElementsByClassName("block-btn")[0].style.color = "black";
+      for(let i=0;i<document.getElementsByClassName("blockurl").length;i++){
+        document.getElementsByClassName("blockurl")[i].style.color = "rgb(230, 25, 25)";
+      document.getElementsByClassName("blockurl")[i].style.fontWeight = "400";
+      }
+    }
+    
+
+  }
+})
+
