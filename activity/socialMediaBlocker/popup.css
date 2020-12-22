@@ -56,11 +56,14 @@
     color: rgb(230, 25, 25);
     cursor: pointer;
     margin-top: 3%;
-    
+
 }
 .blocker-sites i{
     margin-top: 3%;
     color: rgb(61, 216, 61);
+}
+.blocker-sites i:hover{
+    color: rgb(253, 8, 8);
 }
 .blocker-sites li text{
 
