@@ -1,0 +1,18 @@
+{
+    "name": "meaningFinder",
+    "version": "1.0",
+    "description": "This is a word-meanig finder!!",
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "webRequest",
+        "https://en.wikipedia.org/w/*"
+    ]
+  
+}
